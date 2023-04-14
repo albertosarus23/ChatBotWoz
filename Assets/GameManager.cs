@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneMange : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public void StartWoz()
     {

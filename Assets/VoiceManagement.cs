@@ -6,6 +6,7 @@ public class VoiceManagement : MonoBehaviour
 {
     [SerializeField] private AudioSource asOnPlay;
     // [SerializeField] private AudioSource _audio1;
+    public int id;
 
     public List<AudioClip> _aduioList = new List<AudioClip>();
 
@@ -22,7 +23,11 @@ public class VoiceManagement : MonoBehaviour
             asOnPlay.Stop();
         }
     }
-    
+
+    public void Setid(int input)
+    {
+        id = input;
+    }
     public void RePlaying()
     {
         // if researcher presses 'r' key, then the sound playing will play again
@@ -40,8 +45,9 @@ public class VoiceManagement : MonoBehaviour
         }
     }
     
-    public void VoiceManage(int num)
+    public void VoiceManage()
     {
+        int num = id;
         if (!(num >= _aduioList.Count))
         {
             asOnPlay.clip = _aduioList[num];
